@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Texture/Gradiente per il cerchio rosso -->
+    <radialGradient id="redSun" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#E63928"/>
+      <stop offset="70%" stop-color="#C82314"/>
+      <stop offset="100%" stop-color="#9E1207"/>
+    </radialGradient>
+    
+    <!-- Ombra morbida per dare profondità -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(25, 10)">
+    <!-- Mezzaluna Nera di Sfondo (Eclissi) -->
+    <path d="M 285 65 C 400 115 450 250 390 365 C 340 460 220 480 140 430 C 230 470 360 410 400 310 C 435 220 380 110 285 65 Z" fill="#1A1A1A" />
+    
+    <!-- Anello/Bordo Bianco di Separazione -->
+    <path d="M 125 75 A 185 185 0 1 0 440 310 A 195 195 0 0 1 125 75 Z" fill="#FFFFFF" />
+
+    <!-- Cerchio Rosso Principale -->
+    <circle cx="250" cy="250" r="175" fill="url(#redSun)" filter="url(#shadow)" />
+
+    <!-- Linee di Velocità / Orizzontali (Nere sulla sinistra, Bianche sul cerchio) -->
+    <!-- Linea 1 (Superiore) -->
+    <path d="M 50 175 L 190 175" stroke="#1A1A1A" stroke-width="14" stroke-linecap="round" />
+    <path d="M 190 175 L 240 175" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Linea 2 (Centrale alta) -->
+    <path d="M 90 215 L 180 215" stroke="#1A1A1A" stroke-width="14" stroke-linecap="round" />
+    <path d="M 180 215 L 290 215" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Linea 3 (Centrale bassa) -->
+    <path d="M 30 255 L 170 255" stroke="#1A1A1A" stroke-width="14" stroke-linecap="round" />
+    <path d="M 170 255 L 220 255" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Linea 4 (Inferiore) -->
+    <path d="M 100 295 L 180 295" stroke="#1A1A1A" stroke-width="14" stroke-linecap="round" />
+    <path d="M 180 295 L 300 295" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" />
+  </g>
+</svg>
